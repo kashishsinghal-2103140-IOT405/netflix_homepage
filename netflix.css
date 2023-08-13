@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)), url(images/header-image.png);
+    background-repeat: no repeat;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.logo{
+    display: inline-block;
+    width: 200px;
+    position: relative;
+    top: 10px;
+    left: 40px;
+}
+nav button{
+    position: relative;
+    top: 5px;
+    right: 115px;
+    background: red;
+    color: white;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 15px;
+    margin-left: 10px;
+}
+.btn-1{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 12px;
+}
+.btn-1 img{
+    width: 13px;
+    margin-left: 8px;
+}
+.header-details{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-details>h1{
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    max-width: 650px;
+}
+.header-details>h2{
+   font-weight: 400; 
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+.details{
+    background-color: white;
+    border: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 2px;
+}
+.details input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.details button{
+    border: 0;
+    outline: 0;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px 30px;
+    display: flex;
+}
+.feature-1{
+    padding: 40px 12%;
+    font-size: 18px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    padding: 20px;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.feature-1 h2{
+    margin-bottom: 12px;
+}
+.FAQ{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.questions{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.questions li{
+    width: 100%;
+    list-style: none;
+    padding:5px;
+}
+.questions li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type='radio']{
+    display: none;
+}
+.questions .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.questions li input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.questions .content:target {
+    max-height: 600px;
+    padding: 30px 20px;
+}.questions li input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.FAQ .details{
+    width: 600px;
+    margin: 20px auto 60px;
+}
+.FAQ small{
+    font-size: 13px;
+}
+.footer{
+    padding: 50px 15% 10px;
+    border-top: 4px solid #333;
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    color: #777;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer button{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.copyright-text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+ @media only screen and (max-width: 600px){
+    nav .logo{
+        width: 100px;
+    }
+    nav button{
+        margin-right: 10px;
+        padding: 5px 10px;
+        left: 0;
+    }
+    nav .btn-1{
+        margin-right: 0px;
+        padding: 4px 8px;
+    }
+    .feature-1 .text-col{
+        font-size: 14px;
+    }
+    .text-col .img-col{
+        flex-basis: 100%;
+    }
+    .FAQ .details{
+        width: 290px;
+    }
+}
